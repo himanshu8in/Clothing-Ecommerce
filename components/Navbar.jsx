@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useCart } from "@/context/CartContext";
+import { useAuth } from "@/context/AuthContext";
 import styles from "./Navbar.module.css";
 
 const links = [
@@ -13,6 +14,8 @@ const links = [
 
 export default function Navbar() {
   const { cartItems } = useCart();
+  const { user } = useAuth();
+  const profileInitial = user?.name?.charAt(0)?.toUpperCase() ?? "∘";
 
   return (
     <nav className={styles.navBar}>
@@ -37,6 +40,16 @@ export default function Navbar() {
           <li>
             <Link href="/cart" className={`${styles.navLink} ${styles.cartPill}`}>
               🛒 Cart ({cartItems.length})
+            </Link>
+          </li>
+          <li>
+            <Link
+              href={user ? "/profile" : "/login"}
+              className={`${styles.navLink} ${styles.profilePill}`}
+              aria-label={user ? "Go to profile" : "Login"}
+            >
+              <span className={styles.profileIcon}>{profileInitial}</span>
+              <span className={styles.profileLabel}>{user ? "Profile" : "Login"}</span>
             </Link>
           </li>
         </ul>
