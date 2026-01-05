@@ -1,8 +1,10 @@
 import ProductGrid from "@/components/ProductGrid";
+import { getBaseUrl } from "@/lib/getBaseUrl";
 import styles from "./kids.module.css";
 
 async function getProducts() {
-  const res = await fetch("http://localhost:3000/api/products", {
+  const baseUrl = getBaseUrl();
+  const res = await fetch(`${baseUrl}/api/products`, {
     cache: "no-store",
   });
   return res.json();
