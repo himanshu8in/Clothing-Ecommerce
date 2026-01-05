@@ -1,0 +1,231 @@
+.main {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #020617;
+  color: white;
+}
+
+.glowLayer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.glowOne,
+.glowTwo {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(140px);
+}
+
+.glowOne {
+  top: -8rem;
+  left: -4rem;
+  width: 28rem;
+  height: 28rem;
+  background: linear-gradient(135deg, rgba(244, 63, 94, 0.45), rgba(249, 115, 22, 0.3));
+}
+
+.glowTwo {
+  bottom: -6rem;
+  right: -2rem;
+  width: 32rem;
+  height: 32rem;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.35), rgba(14, 165, 233, 0.25));
+}
+
+.section {
+  position: relative;
+  z-index: 10;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+}
+
+.heroGrid {
+  display: grid;
+  gap: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
+.heroCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.heroTag {
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.heroTitle {
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 600;
+  color: white;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.heroAccent {
+  background: linear-gradient(90deg, #f43f5e, #fbbf24, #4ade80);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroBody {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+}
+
+.perkRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.75rem;
+  backdrop-filter: blur(12px);
+}
+
+.perkLabel {
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.35rem;
+}
+
+.perkValue {
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+}
+
+.infoPanel {
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2.5rem;
+  backdrop-filter: blur(18px);
+}
+
+.infoGrid {
+  display: grid;
+  gap: 1.2rem;
+}
+
+@media (min-width: 640px) {
+  .infoGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.infoCard {
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  padding: 1.4rem;
+}
+
+.infoCard:nth-child(3) {
+  grid-column: span 2;
+}
+
+.infoLabel {
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.infoTitle {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0.4rem 0;
+}
+
+.infoCopy {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+}
+
+.catalogSection {
+  position: relative;
+  z-index: 10;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1.5rem 5rem;
+}
+
+.catalogHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .catalogHeader {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.catalogTag {
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.catalogTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.catalogActions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.actionButton {
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.75rem 1.8rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: white;
+  transition: transform 150ms ease, border 150ms ease, background 150ms ease;
+}
+
+.actionButton:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.gridWrapper {
+  border-radius: 1.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.75rem;
+  box-shadow: 0 30px 80px rgba(2, 6, 23, 0.6);
+  backdrop-filter: blur(16px);
+}

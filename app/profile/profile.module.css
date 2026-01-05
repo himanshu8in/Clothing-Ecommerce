@@ -1,0 +1,355 @@
+.pageShell {
+  position: relative;
+  min-height: 100vh;
+  background: radial-gradient(circle at top right, rgba(79, 70, 229, 0.12), transparent 45%),
+    radial-gradient(circle at bottom left, rgba(14, 165, 233, 0.12), transparent 45%);
+  padding: 4rem 1.5rem 5rem;
+}
+
+.heroPanel {
+  max-width: 72rem;
+  margin: 0 auto 3rem;
+  padding: 3rem;
+  border-radius: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(15, 23, 42, 0.95);
+  color: white;
+  box-shadow: 0 35px 90px rgba(15, 23, 42, 0.4);
+}
+
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 0.75rem;
+  color: rgba(248, 250, 252, 0.7);
+  margin-bottom: 0.5rem;
+}
+
+.heroTitle {
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+}
+
+.heroCopy {
+  font-size: 1.05rem;
+  color: rgba(248, 250, 252, 0.75);
+  margin-bottom: 2rem;
+}
+
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.statLabel {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.7rem;
+  color: rgba(248, 250, 252, 0.55);
+}
+
+.statValue {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 0.35rem;
+}
+
+.logoutButton {
+  border: none;
+  border-radius: 999px;
+  background: rgba(248, 250, 252, 0.15);
+  color: white;
+  padding: 0.85rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 150ms ease;
+}
+
+.logoutButton:hover {
+  background: rgba(248, 250, 252, 0.25);
+}
+
+.gridLayout {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+}
+
+.profileCard {
+  border-radius: 2rem;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(248, 250, 252, 0.92);
+  padding: 2rem;
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cardEyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.cardTitle {
+  margin: 0.35rem 0 0;
+  font-size: 1.5rem;
+  color: #0f172a;
+}
+
+.editButton {
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.15);
+  background: white;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0f172a;
+  cursor: pointer;
+}
+
+.profileBody {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.avatarBlock {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatarCircle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #ec4899);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.profileName {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.profileEmail {
+  margin: 0.15rem 0 0;
+  color: #475569;
+}
+
+.profileMeta {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  margin: 0;
+}
+
+.profileMeta dt {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: #94a3b8;
+}
+
+.profileMeta dd {
+  margin: 0.25rem 0 0;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.orderList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.orderCard {
+  border-radius: 1.5rem;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  padding: 1.25rem;
+  background: white;
+}
+
+.orderId {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.orderMeta {
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+.orderTotal {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.orderItems {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.orderItemRow {
+  display: flex;
+  gap: 0.85rem;
+  align-items: center;
+}
+
+.itemThumb {
+  width: 64px;
+  height: 64px;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.itemName {
+  margin: 0;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.itemMeta {
+  margin: 0.1rem 0 0;
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+.wishlistGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.wishlistCard {
+  border-radius: 1.25rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  padding: 1rem;
+  background: white;
+  display: flex;
+  gap: 1rem;
+}
+
+.wishlistThumb {
+  width: 96px;
+  height: 96px;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.itemBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(99, 102, 241, 0.1);
+  color: #4338ca;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.addressGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.addressCard {
+  border-radius: 1.25rem;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  padding: 1.25rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.addressLabel {
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0;
+}
+
+.addressTag {
+  font-size: 0.75rem;
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  background: rgba(16, 185, 129, 0.15);
+  color: #047857;
+}
+
+.addressRecipient {
+  font-weight: 600;
+  margin: 0.25rem 0 0;
+}
+
+.addressPhone {
+  margin: 0;
+  color: #475569;
+}
+
+.addressBody {
+  margin: 0;
+  color: #475569;
+  white-space: pre-line;
+}
+
+.addressActions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.addressActions button {
+  border: none;
+  background: none;
+  color: #2563eb;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .heroPanel,
+  .profileCard {
+    padding: 1.5rem;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+  }
+
+  .wishlistCard {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .wishlistThumb {
+    width: 100%;
+    height: 160px;
+  }
+}

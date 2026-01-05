@@ -1,0 +1,368 @@
+.main {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #f8fafc;
+}
+
+.glowLayer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.glowTop,
+.glowBottom {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(120px);
+}
+
+.glowTop {
+  top: -5rem;
+  right: 0;
+  width: 18rem;
+  height: 18rem;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.22), rgba(14, 165, 233, 0.2));
+}
+
+.glowBottom {
+  left: 2.5rem;
+  bottom: 3rem;
+  width: 16rem;
+  height: 16rem;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.18), rgba(163, 230, 53, 0.15));
+}
+
+.section {
+  position: relative;
+  z-index: 10;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+}
+
+.heroCard {
+  border-radius: 2rem;
+  border: 1px solid #e2e8f0;
+  background: rgba(255, 255, 255, 0.88);
+  padding: 2.5rem;
+  box-shadow: 0 25px 70px rgba(15, 23, 42, 0.08);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.heroGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .heroGrid {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.heroCopy {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.heroTag {
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.heroTitle {
+  font-size: clamp(2.1rem, 4vw, 3rem);
+  font-weight: 600;
+  color: #0f172a;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.heroAccent {
+  background: linear-gradient(90deg, #6366f1, #0ea5e9, #14b8a6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroBody {
+  font-size: 1.1rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.heroMetrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+.metricValue {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #0f172a;
+  display: inline-block;
+  margin-right: 0.4rem;
+}
+
+.heroPanel {
+  flex: 1 1 0;
+  border-radius: 1.5rem;
+  background: #0f172a;
+  color: white;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.35);
+}
+
+.panelGrid {
+  display: grid;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+@media (min-width: 640px) {
+  .panelGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.panelCard {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+}
+
+.panelHighlight {
+  grid-column: span 2;
+}
+
+.panelLabel {
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.panelValue {
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.panelCopy {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.5;
+}
+
+.filterGroup {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.filterStack {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.filterGroupLabel {
+  font-size: 0.85rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin-bottom: 0.75rem;
+}
+
+.refinePanel {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .refinePanel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.filterButton {
+  border-radius: 999px;
+  border: 1px solid #e2e8f0;
+  background: white;
+  padding: 0.7rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #475569;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+  transition: transform 150ms ease, border 150ms ease, color 150ms ease;
+}
+
+.filterButton:hover {
+  transform: translateY(-2px);
+  border-color: #0f172a;
+  color: #0f172a;
+}
+
+.filterDot {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #94a3b8, #475569);
+  display: inline-block;
+  margin-right: 0.35rem;
+}
+
+.chipRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.chipButton {
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.2);
+  background: #0f172a;
+  color: white;
+  font-weight: 600;
+  padding: 0.55rem 1.15rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+  box-shadow: 0 15px 30px rgba(15, 23, 42, 0.25);
+}
+
+.chipButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 32px rgba(15, 23, 42, 0.28);
+}
+
+.colorRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.colorChip {
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: white;
+  padding: 0.45rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: border 150ms ease, transform 150ms ease;
+}
+
+.colorChip:hover {
+  border-color: #0f172a;
+  transform: translateY(-1px);
+}
+
+.colorSwatch {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.2);
+  background: #94a3b8;
+}
+
+.colorSwatch[data-tone="Onyx"] {
+  background: #0f172a;
+}
+
+.colorSwatch[data-tone="Ivory"] {
+  background: #f8fafc;
+}
+
+.colorSwatch[data-tone="Olive"] {
+  background: #4d7c0f;
+}
+
+.colorSwatch[data-tone="Ink"] {
+  background: #1d4ed8;
+}
+
+.colorSwatch[data-tone="Clay"] {
+  background: #9a3412;
+}
+
+.catalogSection {
+  position: relative;
+  z-index: 10;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1.5rem 5rem;
+}
+
+.catalogHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .catalogHeader {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.catalogEyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.catalogTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0;
+}
+
+.catalogAction {
+  border-radius: 999px;
+  border: 1px solid #e2e8f0;
+  background: white;
+  padding: 0.65rem 1.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #475569;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  transition: transform 150ms ease, border 150ms ease;
+}
+
+.catalogAction:hover {
+  transform: translateY(-2px);
+  border-color: #0f172a;
+}
+
+.gridCard {
+  border-radius: 2rem;
+  border: 1px solid #e2e8f0;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 1.5rem;
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.08);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}

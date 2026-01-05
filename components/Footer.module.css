@@ -1,0 +1,202 @@
+.footer {
+  background: radial-gradient(circle at top, rgba(15, 23, 42, 0.9), #030712 60%);
+  color: #f8fafc;
+  padding: 4rem clamp(1.5rem, 4vw, 5rem);
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.topGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 2.5rem;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.logoBadge {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #7c3aed, #ec4899);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+}
+
+.brandTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.brandCopy {
+  color: rgba(248, 250, 252, 0.8);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.sectionTitle {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(248, 250, 252, 0.7);
+  margin-bottom: 1rem;
+}
+
+.linkList,
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-size: 0.95rem;
+}
+
+.link {
+  color: rgba(248, 250, 252, 0.9);
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.link:hover {
+  color: #fff;
+  transform: translateX(2px);
+}
+
+.contactList span {
+  display: inline-block;
+  color: rgba(248, 250, 252, 0.85);
+}
+
+.newsletterRow {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) repeat(auto-fit, minmax(190px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.newsletterCard {
+  padding: 1.75rem;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 20px;
+  background: rgba(30, 41, 59, 0.35);
+  box-shadow: 0 25px 70px rgba(15, 23, 42, 0.25);
+}
+
+.newsletterCard p {
+  color: rgba(248, 250, 252, 0.82);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.newsletterForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.newsletterInput {
+  flex: 1;
+  min-width: 220px;
+  padding: 0.85rem 1rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: rgba(15, 23, 42, 0.5);
+  color: #f8fafc;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.newsletterInput:focus {
+  border-color: rgba(236, 72, 153, 0.6);
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.25);
+}
+
+.newsletterButton {
+  border: none;
+  border-radius: 999px;
+  padding: 0.85rem 1.75rem;
+  background: linear-gradient(135deg, #7c3aed, #ec4899);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.newsletterButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(236, 72, 153, 0.35);
+}
+
+.iconCluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.iconButton {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(15, 23, 42, 0.6);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, border 0.2s ease;
+}
+
+.iconButton svg {
+  width: 22px;
+  height: 22px;
+}
+
+.iconButton:hover {
+  transform: translateY(-2px);
+  border-color: rgba(236, 72, 153, 0.7);
+}
+
+.paymentIcon {
+  width: 72px;
+  height: 46px;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(15, 23, 42, 0.55);
+  display: grid;
+  place-items: center;
+  padding: 0.35rem;
+}
+
+.bottomBar {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+  text-align: center;
+  color: rgba(248, 250, 252, 0.7);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 720px) {
+  .newsletterRow {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletterForm {
+    flex-direction: column;
+  }
+
+  .newsletterInput {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .newsletterButton {
+    width: 100%;
+  }
+}
