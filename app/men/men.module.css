@@ -66,6 +66,7 @@
 }
 
 .heroCopy {
+  min-width: 0;
   flex: 1 1 0;
   display: flex;
   flex-direction: column;
@@ -118,6 +119,7 @@
 
 .heroPanel {
   flex: 1 1 0;
+  min-width: 0;
   border-radius: 1.5rem;
   background: #0f172a;
   color: white;
@@ -145,6 +147,12 @@
 
 .panelHighlight {
   grid-column: span 2;
+}
+
+@media (max-width: 639px) {
+  .panelHighlight {
+    grid-column: auto;
+  }
 }
 
 .panelLabel {

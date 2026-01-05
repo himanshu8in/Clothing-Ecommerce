@@ -10,10 +10,35 @@
 .navInner {
   max-width: 80rem;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 1rem 1.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  position: relative;
+}
+
+.menuToggle {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.85rem;
+  background: rgba(248, 250, 252, 0.08);
+  border: 1px solid rgba(248, 250, 252, 0.12);
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.35rem;
+  cursor: pointer;
+}
+
+.menuToggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: white;
+  border-radius: 999px;
 }
 
 .brand {
@@ -24,13 +49,90 @@
   letter-spacing: 0.08em;
 }
 
+.navOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  z-index: 40;
+}
+
+.navPanel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: min(320px, 80vw);
+  background: rgba(2, 6, 23, 0.95);
+  border-left: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: -15px 0 40px rgba(2, 6, 23, 0.6);
+  transform: translateX(100%);
+  transition: transform 220ms ease;
+  padding: 5rem 1.5rem 2rem;
+  z-index: 45;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.navPanelOpen {
+  transform: translateX(0);
+}
+
+.closeButton {
+  align-self: flex-end;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(248, 250, 252, 0.2);
+  background: transparent;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
 .navList {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
   margin: 0;
   padding: 0;
-  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .navInner {
+    flex-wrap: nowrap;
+  }
+
+  .menuToggle {
+    display: none;
+  }
+
+  .navOverlay {
+    display: none;
+  }
+
+  .navPanel {
+    position: static;
+    height: auto;
+    width: auto;
+    transform: none;
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .navList {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .closeButton {
+    display: none;
+  }
 }
 
 .navLink {

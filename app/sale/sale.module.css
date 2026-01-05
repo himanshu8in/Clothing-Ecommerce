@@ -55,6 +55,7 @@
 }
 
 .heroCopy {
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -114,6 +115,7 @@
 }
 
 .infoPanel {
+  min-width: 0;
   border-radius: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
@@ -141,6 +143,12 @@
 
 .infoCard:nth-child(3) {
   grid-column: span 2;
+}
+
+@media (max-width: 639px) {
+  .infoCard:nth-child(3) {
+    grid-column: auto;
+  }
 }
 
 .infoLabel {
