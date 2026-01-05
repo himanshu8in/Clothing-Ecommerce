@@ -1,21 +1,12 @@
 import ProductGrid from "@/components/ProductGrid";
-import { getBaseUrl } from "@/lib/getBaseUrl";
+import { products } from "@/lib/product";
 import styles from "./men.module.css";
-
-async function getProducts() {
-  const baseUrl = getBaseUrl();
-  const res = await fetch(`${baseUrl}/api/products`, {
-    cache: "no-store",
-  });
-  return res.json();
-}
 
 const sizeFilters = ["XS", "S", "M", "L", "XL", "XXL"];
 const colorFilters = ["Onyx", "Ivory", "Olive", "Ink", "Clay"];
 const editFilters = ["Tailored", "Streetwear", "Essentials", "Footwear", "Outerwear"];
 
-export default async function MenPage() {
-  const products = await getProducts();
+export default function MenPage() {
   const menProducts = products.filter(
     (product) => product.category === "men"
   );

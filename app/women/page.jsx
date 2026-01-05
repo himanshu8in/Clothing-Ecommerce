@@ -1,14 +1,6 @@
 import ProductGrid from "@/components/ProductGrid";
-import { getBaseUrl } from "@/lib/getBaseUrl";
+import { products } from "@/lib/product";
 import styles from "./women.module.css";
-
-async function getProducts() {
-  const baseUrl = getBaseUrl();
-  const res = await fetch(`${baseUrl}/api/products`, {
-    cache: "no-store",
-  });
-  return res.json();
-}
 
 const heroStats = [
   { label: "Runway inspired edits", value: "14" },
@@ -20,8 +12,7 @@ const silhouetteFilters = ["Evening", "Ready-to-wear", "Bridal", "Resort"];
 const fabricFilters = ["Satin", "Organza", "Chiffon", "Knit"];
 const paletteFilters = ["Quartz", "Champagne", "Obsidian", "Ultraviolet"];
 
-export default async function WomenPage() {
-  const products = await getProducts();
+export default function WomenPage() {
   const womenProducts = products.filter(
     (product) => product.category === "women"
   );

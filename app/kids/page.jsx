@@ -1,19 +1,10 @@
 import ProductGrid from "@/components/ProductGrid";
-import { getBaseUrl } from "@/lib/getBaseUrl";
+import { products } from "@/lib/product";
 import styles from "./kids.module.css";
-
-async function getProducts() {
-  const baseUrl = getBaseUrl();
-  const res = await fetch(`${baseUrl}/api/products`, {
-    cache: "no-store",
-  });
-  return res.json();
-}
 
 const ageBadges = ["0-2 yrs", "3-5 yrs", "6-8 yrs", "9-11 yrs", "12-14 yrs"];
 
-export default async function KidsPage() {
-  const products = await getProducts();
+export default function KidsPage() {
   const kidsProducts = products.filter(
     (product) => product.category === "kids"
   );

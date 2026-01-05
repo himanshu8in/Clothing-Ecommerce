@@ -1,14 +1,6 @@
 import ProductGrid from "@/components/ProductGrid";
-import { getBaseUrl } from "@/lib/getBaseUrl";
+import { products } from "@/lib/product";
 import styles from "./sale.module.css";
-
-async function getProducts() {
-  const baseUrl = getBaseUrl();
-  const res = await fetch(`${baseUrl}/api/products`, {
-    cache: "no-store",
-  });
-  return res.json();
-}
 
 const perks = [
   { label: "Extra markdowns", value: "-40%" },
@@ -16,8 +8,7 @@ const perks = [
   { label: "VIP early access", value: "Yes" },
 ];
 
-export default async function SalePage() {
-  const products = await getProducts();
+export default function SalePage() {
   const saleProducts = products.filter(
     (product) => product.category === "sale"
   );
